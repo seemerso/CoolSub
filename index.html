@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Cool Submissions and Components</title>
+
+</head>
+<body>
+
+<div id="app">
+
+  <div class="inputStyle">
+    <input placeholder="Name" v-model="name" /><br>
+    <input placeholder="Email" v-model="email" />
+    <div class="stuff">{{stuff}}</div>
+    <div class="submit">{{submit}}</div>
+  </div>
+
+ <div class="buttonStyler">
+    <codenames v-for="item in codenames" v-bind:name="item.name" v-bind:cname="item.codename" v-bind:flipped="item.flipped"></codenames>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.min.js"></script>
+<script  src="./script.js"></script>
+</body>
+</html>
